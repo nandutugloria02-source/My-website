@@ -21,13 +21,13 @@ html<!DOCTYPE html>
         header { 
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(37, 99, 235, 0.85)), url('https://unsplash.com') no-repeat center center/cover; 
             color: white; 
-            padding: 9rem 2rem; 
+            padding: 6rem 2rem; 
             text-align: center; 
         }
-        header h1 { font-size: 3.8rem; margin-bottom: 1rem; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); font-weight: 800; }
-        header p { font-size: 1.5rem; opacity: 0.95; margin-bottom: 2.5rem; font-weight: 400; color: #93c5fd; max-width: 800px; margin-left: auto; margin-right: auto; }
+        header h1 { font-size: 3.8rem; margin-bottom: 0.5rem; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); font-weight: 800; }
+        header p { font-size: 1.4rem; opacity: 0.95; margin-bottom: 1.5rem; font-weight: 400; color: #93c5fd; max-width: 800px; margin-left: auto; margin-right: auto; }
         
-        .header-links { margin-bottom: 2.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .header-links { margin-bottom: 1.75rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
         .header-link { color: white; text-decoration: none; font-weight: 600; font-size: 1.15rem; background: rgba(255,255,255,0.1); padding: 0.5rem 1.25rem; border-radius: 20px; transition: all 0.3s; }
         .header-link:hover { background: rgba(255,255,255,0.25); }
 
@@ -44,13 +44,17 @@ html<!DOCTYPE html>
         .about p { font-size: 1.25rem; color: #334155; margin-bottom: 1.5rem; line-height: 1.8; text-align: justify; }
         .about p strong { color: var(--brand); }
         
+        .remote-roles-list { margin: 1.5rem 0; padding-left: 1.5rem; }
+        .remote-roles-list li { font-size: 1.15rem; color: #334155; margin-bottom: 0.75rem; text-align: left; }
+        .remote-roles-list strong { color: var(--brand); }
+
         /* Irresistible Value Proposition Grid */
         .value-props { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; border-top: 2px solid #f1f5f9; padding-top: 3rem; }
         .prop-card { text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px; }
         .prop-card strong { display: block; font-size: 1.5rem; color: var(--secondary); margin-bottom: 0.5rem; }
         .prop-card span { color: #475569; font-size: 1rem; font-weight: 500; }
 
-        /* MULTI-COLUMN CARD SEPARATION - Clean Side-by-Side Pitch Layout */
+        /* MULTI-COLUMN DESIGN SEPARATION CARDS */
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; margin-bottom: 5rem; width: 100%; }
         .card { background: white; padding: 0; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.06); text-align: left; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid #e2e8f0; }
         .card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.12); border-color: var(--brand); }
@@ -62,18 +66,18 @@ html<!DOCTYPE html>
         .card ul li { margin-bottom: 0.75rem; position: relative; list-style-type: none; padding-left: 0.5rem; }
         .card ul li::before { content: "✓"; color: var(--secondary); font-weight: bold; position: absolute; left: -1.2rem; }
 
-        /* Skill Badges Module */
+        /* MULTI-COLUMN DESIGN SKILL BADGES LAYOUT */
         .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 5rem; }
-        .skills-category { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border-bottom: 4px solid #cbd5e1; }
-        .skills-category.sc-social { border-color: var(--accent); }
-        .skills-category.sc-ea { border-color: var(--brand); }
-        .skills-category.sc-teach { border-color: var(--secondary); }
-        .skills-category h3 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 700; }
-        .badge-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-        .badge { background: #f1f5f9; color: #334155; padding: 0.6rem 1.1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
-        .badge.social { background: #fef3c7; color: #b45309; }
-        .badge.ea { background: #dbeafe; color: #1e40af; }
-        .badge.teacher { background: #ccfbf1; color: #0f766e; }
+        .skills-category { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.04); border-top: 4px solid #cbd5e1; }
+        .skills-category.sc-social { border-top-color: var(--accent); }
+        .skills-category.sc-ea { border-top-color: var(--brand); }
+        .skills-category.sc-teach { border-top-color: var(--secondary); }
+        .skills-category h3 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+        .badge-container { display: flex; flex-direction: column; gap: 0.6rem; }
+        .badge { background: #f1f5f9; color: #334155; padding: 0.65rem 1.25rem; border-radius: 8px; font-size: 1rem; font-weight: 600; text-align: left; display: block; width: 100%; border-left: 4px solid transparent; }
+        .badge.social { background: #fffbeb; color: #b45309; border-left-color: var(--accent); }
+        .badge.ea { background: #eff6ff; color: #1e40af; border-left-color: var(--brand); }
+        .badge.teacher { background: #f0fdf4; color: #166534; border-left-color: var(--secondary); }
         
         /* Direct Action Conversion Contact Block */
         .contact-section { background: linear-gradient(135deg, var(--primary), var(--brand)); color: white; text-align: center; padding: 6rem 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25); }
@@ -102,33 +106,26 @@ html<!DOCTYPE html>
 </head>
 <body>
 
-    <!-- Catchy Billboard Sales Banner -->
+    <!-- Header Banner -->
     <header>
         <h1>Ready to Multiply Your Productivity?</h1>
         <p>Meet Gloria Nandutu: High-Performance Remote Executive Assistant, Professional Social Worker, and Strategic Distance Educator Built to Scale Your Output.</p>
         <div class="header-links">
-            <a href="mailto:nandutu.gloria02@gmail.com" class="header-link">✉ Email Me Now</a>
-            <a href="https://linkedin.com" target="_blank" class="header-link">💼 Let's Connect on LinkedIn</a>
+            <a href="mailto:nandutu.gloria02@gmail.com" class="header-link">✉ nandutu.gloria02@gmail.com</a>
+            <a href="https://linkedin.com" target="_blank" class="header-link">💼 LinkedIn Profile</a>
         </div>
         <a href="mailto:nandutu.gloria02@gmail.com" class="cta-btn">Secure My Services Today</a>
     </header>
 
     <div class="container">
         
-        <!-- The Core Sales Advertisement Pitch -->
+        <!-- High-Impact Professional Profile -->
         <section class="about">
-            <h2>Why Smart Organizations Hire Me</h2>
+            <h2>Professional Remote Profile</h2>
             <p>
-                In today's fast-moving environment, executives and teams are drowning in administrative noise, dropping sales leads, and struggling to coordinate field operations. <strong>I am here to solve that exact problem.</strong> I combine structural corporate organization with a deep, field-tested expertise in social community metrics and online remote execution. 
+                I am a highly capable, execution-focused **remote professional** equipped to manage high-level corporate operations and social workflows with absolute precision. With a proven history of driving independent online projects, I bring a reliable foundation in cross-timezone communication, cloud systems management, and remote organizational structuring.
             </p>
             <p>
-                I am not a passive virtual helper—I am an active <strong>operational partner</strong>. Whether you need an elite gatekeeper to manage confidential executive communications, an empathetic social specialist to overhaul community resource case records, or a dynamic distant learning setup to convert and teach students across time zones, I engineer results.
+                My specialized remote portfolio encompasses three core pillars of experience:
             </p>
-            
-            <!-- Value Added Proof Highlights -->
-            <div class="value-props">
-                <div class="prop-card">
-                    <strong>Zero Friction</strong>
-                    <span>Flawless remote workflow management without hand-holding.</span>
-                </div>
-                <div class="prop-card">
+            <ul class="remote-roles-list">
