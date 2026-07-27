@@ -49,18 +49,19 @@ html<!DOCTYPE html>
         .badge.teacher { background: #ccfbf1; color: #0f766e; }
         .badge.social { background: #fef3c7; color: #b45309; }
         
-        /* Services Card Grid */
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        /* Services Card Grid - FIXED */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; width: 100%; }
         .card { background: white; padding: 0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); }
         .card-img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 2rem; flex-grow: 1; }
+        .card-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
         .card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.4rem; }
-        .card ul { margin-top: 1rem; padding-left: 1.2rem; color: #4b5563; font-size: 0.95rem; }
+        .card p { color: #4b5563; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; }
+        .card ul { margin-top: auto; padding-left: 1.2rem; color: #4b5563; font-size: 0.95rem; }
         .card ul li { margin-bottom: 0.5rem; }
         
         /* Contact Section */
-        .contact-section { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center; padding: 5rem 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3); }
+        .contact-section { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center; padding: 5rem 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3); margin-top: 2rem; }
         .contact-section h2 { color: white; margin-bottom: 1rem; }
         
         .contact-buttons { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
@@ -96,15 +97,15 @@ html<!DOCTYPE html>
 
     <div class="container">
         
-        <!-- Executive Pitch -->
+        <!-- Summary Pitch -->
         <section class="about">
             <h2>Dedicated Remote Professional & Community Advocate</h2>
             <p style="font-size: 1.15rem; color: #4b5563; margin-top: 1rem; text-align: center;">
-                I combine strong administrative structure with a deep passion for community welfare and virtual education. Leveraging my background in <strong>social work case management</strong>, <strong>remote executive support</strong>, and <strong>digital sales</strong>, I deliver organized, empathetic, and impact-driven results for organizations worldwide.
+                I combine strong administrative structure with a deep passion for community welfare and virtual education. Leveraging my experience in <strong>social work case management</strong>, <strong>remote executive support</strong>, and <strong>digital sales</strong>, I deliver organized, empathetic, and impact-driven results for organizations worldwide.
             </p>
         </section>
 
-        <!-- Dynamic Skills Section -->
+        <!-- Technical Skills Badges Matrix -->
         <h2>Core Expertise & Field Competencies</h2>
         <p class="section-subtitle">Proficiencies ensuring structured workflows, ethical case evaluation, and clear communication</p>
         
@@ -149,12 +150,10 @@ html<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- Detailed Services Grid -->
+        <!-- Detailed Experiences & Services Descriptions -->
         <h2>Professional Services & Practical Experience</h2>
         <p class="section-subtitle">What I deliver to scale your community programs, business operations, and learning initiatives</p>
         
         <section class="services">
             <div class="card">
                 <img src="https://unsplash.com" alt="Social Work Field Meeting" class="card-img">
-                <div class="card-content">
-                    <h3>Social Work & Community Coordination</h3>
