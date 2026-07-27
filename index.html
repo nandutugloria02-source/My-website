@@ -3,29 +3,40 @@ html<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gloria Nandutu | Premium Remote Executive Assistant & Social Specialist</title>
+    <title>Gloria Nandutu | Remote Executive Assistant & Social Specialist</title>
     <style>
         :root {
-            --primary: #0f172a;
+            --primary: #1e3a8a;
             --brand: #2563eb;
             --secondary: #0d9488;
             --accent: #f59e0b;
-            --dark: #1e293b;
+            --dark: #1f2937;
             --light: #f8fafc;
             --linkedin: #0077b5;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        body { background-color: #f1f5f9; color: var(--dark); line-height: 1.6; }
         
-        /* High-Converting Sales Billboard Header */
+        /* Sales Billboard Header */
         header { 
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(37, 99, 235, 0.85)), url('https://unsplash.com') no-repeat center center/cover; 
             color: white; 
-            padding: 6rem 2rem; 
+            padding: 5rem 2rem; 
             text-align: center; 
         }
-        header h1 { font-size: 3.8rem; margin-bottom: 0.5rem; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); font-weight: 800; }
-        header p { font-size: 1.4rem; opacity: 0.95; margin-bottom: 1.5rem; font-weight: 400; color: #93c5fd; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); font-weight: 800; }
+        header p { font-size: 1.4rem; opacity: 0.95; margin-bottom: 1.5rem; color: #93c5fd; max-width: 800px; margin-left: auto; margin-right: auto; }
         
         .header-links { margin-bottom: 1.75rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
         .header-link { color: white; text-decoration: none; font-weight: 600; font-size: 1.15rem; background: rgba(255,255,255,0.1); padding: 0.5rem 1.25rem; border-radius: 20px; transition: all 0.3s; }
@@ -34,98 +45,96 @@ html<!DOCTYPE html>
         .cta-btn { display: inline-block; background: var(--accent); color: #000; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); text-transform: uppercase; letter-spacing: 1px; }
         .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6); background: #e08e06; }
         
-        .container { max-width: 1200px; margin: auto; padding: 5rem 2rem; }
-        h2 { text-align: center; color: var(--primary); margin-bottom: 0.5rem; font-size: 2.5rem; font-weight: 800; }
-        .section-subtitle { text-align: center; color: #64748b; margin-bottom: 4rem; font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .container { max-width: 1200px; margin: auto; padding: 4rem 2rem; text-align: center; }
+        h2 { color: var(--primary); margin-bottom: 0.5rem; font-size: 2.4rem; font-weight: 800; text-align: center; }
+        .section-subtitle { color: #64748b; margin-bottom: 3rem; font-size: 1.15rem; text-align: center; }
         
-        /* The Magnetic Sales Pitch Profile */
-        .about { background: white; padding: 4.5rem; border-radius: 24px; margin-bottom: 5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-top: 8px solid var(--brand); position: relative; }
-        .about h2 { text-align: left; margin-bottom: 1.5rem; color: var(--primary); font-size: 2.2rem; }
+        /* Profile Pitch Card */
+        .about { background: white; padding: 4rem 3.5rem; border-radius: 16px; margin-bottom: 4rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--brand); text-align: left; }
+        .about h2 { text-align: left; color: var(--primary); margin-bottom: 1.5rem; font-size: 2rem; }
         .about p { font-size: 1.25rem; color: #334155; margin-bottom: 1.5rem; line-height: 1.8; text-align: justify; }
-        .about p strong { color: var(--brand); }
         
         .remote-roles-list { margin: 1.5rem 0; padding-left: 1.5rem; }
         .remote-roles-list li { font-size: 1.15rem; color: #334155; margin-bottom: 0.75rem; text-align: left; }
         .remote-roles-list strong { color: var(--brand); }
 
-        /* Irresistible Value Proposition Grid */
-        .value-props { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; border-top: 2px solid #f1f5f9; padding-top: 3rem; }
-        .prop-card { text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px; }
-        .prop-card strong { display: block; font-size: 1.5rem; color: var(--secondary); margin-bottom: 0.5rem; }
-        .prop-card span { color: #475569; font-size: 1rem; font-weight: 500; }
-
-        /* MULTI-COLUMN DESIGN SEPARATION CARDS */
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; margin-bottom: 5rem; width: 100%; }
-        .card { background: white; padding: 0; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.06); text-align: left; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid #e2e8f0; }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.12); border-color: var(--brand); }
-        .card-img { width: 100%; height: 240px; object-fit: cover; }
+        /* Professional Side-by-Side Service Blocks */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; margin-bottom: 5rem; width: 100%; text-align: left; }
+        .card { background: white; padding: 0; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); display: flex; flex-direction: column; overflow: hidden; border: 1px solid #e2e8f0; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: var(--brand); }
+        .card-img { width: 100%; height: 230px; object-fit: cover; }
         .card-content { padding: 2.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .card h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.45rem; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; }
         .card p { color: #475569; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; text-align: justify; }
         .card ul { margin-top: auto; padding-left: 1.2rem; color: #334155; font-size: 1rem; }
-        .card ul li { margin-bottom: 0.75rem; position: relative; list-style-type: none; padding-left: 0.5rem; }
+        .card ul li { margin-bottom: 0.6rem; list-style-type: none; position: relative; }
         .card ul li::before { content: "✓"; color: var(--secondary); font-weight: bold; position: absolute; left: -1.2rem; }
 
-        /* MULTI-COLUMN DESIGN SKILL BADGES LAYOUT */
-        .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 5rem; }
-        .skills-category { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.04); border-top: 4px solid #cbd5e1; }
-        .skills-category.sc-social { border-top-color: var(--accent); }
-        .skills-category.sc-ea { border-top-color: var(--brand); }
-        .skills-category.sc-teach { border-top-color: var(--secondary); }
-        .skills-category h3 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
-        .badge-container { display: flex; flex-direction: column; gap: 0.6rem; }
-        .badge { background: #f1f5f9; color: #334155; padding: 0.65rem 1.25rem; border-radius: 8px; font-size: 1rem; font-weight: 600; text-align: left; display: block; width: 100%; border-left: 4px solid transparent; }
-        .badge.social { background: #fffbeb; color: #b45309; border-left-color: var(--accent); }
-        .badge.ea { background: #eff6ff; color: #1e40af; border-left-color: var(--brand); }
-        .badge.teacher { background: #f0fdf4; color: #166534; border-left-color: var(--secondary); }
+        /* EXACT MULTI-COLUMN DESIGN FROM YOUR SCREENSHOT */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem; width: 100%; }
+        .skills-category { background: white; padding: 2.5rem 2rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center; }
+        .skills-category h3 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700; text-align: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
         
-        /* Direct Action Conversion Contact Block */
-        .contact-section { background: linear-gradient(135deg, var(--primary), var(--brand)); color: white; text-align: center; padding: 6rem 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25); }
-        .contact-section h2 { color: white; margin-bottom: 1rem; font-size: 2.8rem; }
-        .contact-section p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: auto; }
+        .badge-container { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; align-items: center; }
+        .badge { display: block; width: 85%; padding: 0.65rem 1.25rem; border-radius: 20px; font-size: 1rem; font-weight: 600; text-align: center; border: 1px solid transparent; }
         
-        .contact-buttons { display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; flex-wrap: wrap; }
+        /* Accurate Screenshot Color Rules */
+        .badge.social { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+        .badge.ea { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+        .badge.teacher { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
+        
+        /* Conversion Contact Box */
+        .contact-section { background: linear-gradient(135deg, var(--primary), var(--brand)); color: white; text-align: center; padding: 5rem 2rem; border-radius: 24px; box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2); margin-top: 2rem; }
+        .contact-section h2 { color: white; margin-bottom: 1rem; font-size: 2.6rem; }
+        
+        .contact-buttons { display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap; }
         .email-link { display: inline-block; color: white; font-size: 1.25rem; font-weight: 700; background: rgba(255,255,255,0.15); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; }
         .email-link:hover { background: white; color: var(--primary); transform: translateY(-2px); }
         
-        .linkedin-link { display: inline-block; color: white; font-size: 1.25rem; font-weight: 700; background: var(--linkedin); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; transition: all 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border: 2px solid transparent; }
-        .linkedin-link:hover { background: #005987; transform: translateY(-2px); box-shadow: 0 15px 25px rgba(0,0,0,0.25); }
+        .linkedin-link { display: inline-block; color: white; font-size: 1.25rem; font-weight: 700; background: var(--linkedin); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; transition: all 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        .linkedin-link:hover { background: #005987; transform: translateY(-2px); }
         
         footer { text-align: center; padding: 4rem 2rem; font-size: 1rem; color: #94a3b8; background: #0f172a; margin-top: 5rem; }
         
-        @media (max-width: 1024px) {
-            .skills-grid { grid-template-columns: 1fr; }
-        }
         @media (max-width: 768px) {
-            header h1 { font-size: 2.8rem; }
-            header p { font-size: 1.2rem; }
-            .about { padding: 2.5rem; }
+            header h1 { font-size: 2.6rem; }
+            .about { padding: 2.5rem 2rem; }
             .contact-buttons { flex-direction: column; align-items: center; gap: 1rem; }
+            .badge { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Banner -->
+    <!-- Header Billboard Banner -->
     <header>
+        <img src="https://skylab.google" alt="Gloria Nandutu Portrait" class="profile-img">
         <h1>Ready to Multiply Your Productivity?</h1>
         <p>Meet Gloria Nandutu: High-Performance Remote Executive Assistant, Professional Social Worker, and Strategic Distance Educator Built to Scale Your Output.</p>
         <div class="header-links">
-            <a href="mailto:nandutu.gloria02@gmail.com" class="header-link">✉ nandutu.gloria02@gmail.com</a>
-            <a href="https://linkedin.com" target="_blank" class="header-link">💼 LinkedIn Profile</a>
+            <a href="mailto:nandutu.gloria02@gmail.com" class="header-link"> ✉ nandutu.gloria02@gmail.com</a>
+            <a href="https://linkedin.com" target="_blank" class="header-link"> 💼 LinkedIn Profile</a>
         </div>
         <a href="mailto:nandutu.gloria02@gmail.com" class="cta-btn">Secure My Services Today</a>
     </header>
 
     <div class="container">
         
-        <!-- High-Impact Professional Profile -->
+        <!-- Professional Profile Summary Box -->
         <section class="about">
-            <h2>Professional Remote Profile</h2>
+            <h2>Why Smart Organizations Hire Me</h2>
             <p>
-                I am a highly capable, execution-focused **remote professional** equipped to manage high-level corporate operations and social workflows with absolute precision. With a proven history of driving independent online projects, I bring a reliable foundation in cross-timezone communication, cloud systems management, and remote organizational structuring.
+                In today's fast-moving environment, executives and teams are drowning in administrative noise, dropping sales leads, and struggling to coordinate field operations. <strong>I am here to solve that exact problem.</strong> I combine structural corporate organization with a deep, field-tested expertise in social community metrics and online remote execution. 
             </p>
             <p>
-                My specialized remote portfolio encompasses three core pillars of experience:
+                I am not a passive virtual helper—I am an active <strong>operational partner</strong>. Whether you need an elite gatekeeper to manage confidential executive communications, an empathetic social specialist to overhaul community resource case records, or a dynamic distant learning setup to convert and teach students across time zones, I engineer results.
             </p>
-            <ul class="remote-roles-list">
+        </section>
+
+        <!-- Professional Side-by-Side Service Cards with Images -->
+        <h2>Specialized Premium Deliverables</h2>
+        <p class="section-subtitle">No plain templates. Look at exactly how I deliver immediate value to your enterprise.</p>
+        
+        <section class="services">
+            <!-- Social Work Card -->
+            <div class="card">
