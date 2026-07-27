@@ -3,7 +3,7 @@ html<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gloria Nandutu | Remote Expert, Social Worker & VA</title>
+    <title>Gloria Nandutu | Remote Executive Assistant & Social Worker</title>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -18,7 +18,7 @@ html<!DOCTYPE html>
         
         /* Hero Section with Professional Background */
         header { 
-            background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(13, 148, 136, 0.85)), url('https://unsplash.com') no-repeat center center/cover; 
+            background: linear-gradient(rgba(30, 58, 138, 0.88), rgba(13, 148, 136, 0.88)), url('https://unsplash.com') no-repeat center center/cover; 
             color: white; 
             padding: 8rem 2rem; 
             text-align: center; 
@@ -37,9 +37,31 @@ html<!DOCTYPE html>
         h2 { text-align: center; color: var(--primary); margin-bottom: 1rem; font-size: 2.2rem; position: relative; }
         .section-subtitle { text-align: center; color: #6b7280; margin-bottom: 3rem; font-size: 1.1rem; }
         
-        /* Layout Modules */
-        .about { background: white; padding: 3.5rem; border-radius: 16px; margin-bottom: 4rem; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-left: 5px solid var(--secondary); }
+        /* High-Impact Remote Summary Profile */
+        .about { background: white; padding: 4rem 3.5rem; border-radius: 16px; margin-bottom: 4rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 6px solid var(--accent); }
+        .about h2 { text-align: left; margin-bottom: 1.5rem; color: var(--dark); font-size: 2rem; }
+        .about p { font-size: 1.2rem; color: #374151; margin-bottom: 1.5rem; line-height: 1.8; text-align: justify; }
         
+        .remote-roles-list { margin: 1.5rem 0; padding-left: 1.5rem; }
+        .remote-roles-list li { font-size: 1.15rem; color: #374151; margin-bottom: 0.75rem; }
+        .remote-roles-list strong { color: var(--primary); }
+
+        .highlight-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; border-top: 2px solid var(--light); padding-top: 2rem; }
+        .stat-item { text-align: center; }
+        .stat-item strong { display: block; font-size: 1.8rem; color: var(--secondary); }
+        .stat-item span { color: #6b7280; font-size: 0.95rem; font-weight: 500; }
+        
+        /* Services Card Grid */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; width: 100%; }
+        .card { background: white; padding: 0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.4rem; }
+        .card p { color: #4b5563; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; text-align: justify; }
+        .card ul { margin-top: auto; padding-left: 1.2rem; color: #4b5563; font-size: 0.95rem; }
+        .card ul li { margin-bottom: 0.5rem; }
+
         /* Skill Badges Module */
         .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 4rem; }
         .skills-category { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
@@ -48,17 +70,6 @@ html<!DOCTYPE html>
         .badge { background: #e0f2fe; color: #0369a1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
         .badge.teacher { background: #ccfbf1; color: #0f766e; }
         .badge.social { background: #fef3c7; color: #b45309; }
-        
-        /* Services Card Grid - FIXED */
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; width: 100%; }
-        .card { background: white; padding: 0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card-img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.4rem; }
-        .card p { color: #4b5563; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; }
-        .card ul { margin-top: auto; padding-left: 1.2rem; color: #4b5563; font-size: 0.95rem; }
-        .card ul li { margin-bottom: 0.5rem; }
         
         /* Contact Section */
         .contact-section { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center; padding: 5rem 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3); margin-top: 2rem; }
@@ -87,73 +98,53 @@ html<!DOCTYPE html>
 
     <header>
         <h1>Gloria Nandutu</h1>
-        <p>Professional Social Worker | Premium Virtual Assistant | Specialized Online Educator</p>
+        <p>Remote Executive Assistant | Professional Social Worker | Specialized Online Educator</p>
         <div class="header-links">
             <a href="mailto:nandutu.gloria02@gmail.com" class="header-link">📧 nandutu.gloria02@gmail.com</a>
             <a href="https://linkedin.com" target="_blank" class="header-link">🔗 LinkedIn Profile</a>
         </div>
-        <a href="mailto:nandutu.gloria02@gmail.com" class="cta-btn">Get In Touch</a>
+        <a href="mailto:nandutu.gloria02@gmail.com" class="cta-btn">Hire Me Now</a>
     </header>
 
     <div class="container">
         
-        <!-- Summary Pitch -->
+        <!-- High-Impact Remote Professional Profile -->
         <section class="about">
-            <h2>Dedicated Remote Professional & Community Advocate</h2>
-            <p style="font-size: 1.15rem; color: #4b5563; margin-top: 1rem; text-align: center;">
-                I combine strong administrative structure with a deep passion for community welfare and virtual education. Leveraging my experience in <strong>social work case management</strong>, <strong>remote executive support</strong>, and <strong>digital sales</strong>, I deliver organized, empathetic, and impact-driven results for organizations worldwide.
+            <h2>Professional Remote Profile</h2>
+            <p>
+                I am a highly capable, execution-focused **remote professional** equipped to manage high-level corporate operations and social workflows with absolute precision. With a proven history of driving independent online projects, I bring a reliable foundation in cross-timezone communication, cloud systems management, and remote organizational structuring.
             </p>
-        </section>
-
-        <!-- Technical Skills Badges Matrix -->
-        <h2>Core Expertise & Field Competencies</h2>
-        <p class="section-subtitle">Proficiencies ensuring structured workflows, ethical case evaluation, and clear communication</p>
-        
-        <section class="skills-grid">
-            <div class="skills-category">
-                <h3>🤝 Social Work Expertise</h3>
-                <div class="badge-container">
-                    <span class="badge social">Case Management</span>
-                    <span class="badge social">Community Advocacy</span>
-                    <span class="badge social">Crisis Intervention</span>
-                    <span class="badge social">Client Welfare Intake</span>
-                    <span class="badge social">Ethical Documentation</span>
-                    <span class="badge social">Resource Allocation</span>
-                    <span class="badge social">Family Support Services</span>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h3>💼 Virtual Assistant Support</h3>
-                <div class="badge-container">
-                    <span class="badge">Calendar Management</span>
-                    <span class="badge">Email Inbox Filtering</span>
-                    <span class="badge">CRM Data Management</span>
-                    <span class="badge">Executive Correspondence</span>
-                    <span class="badge">Document Formatting</span>
-                    <span class="badge">Remote Team Tracking</span>
-                    <span class="badge">Lead Generation & Sales</span>
-                </div>
-            </div>
+            <p>
+                My specialized remote portfolio encompasses three core pillars of experience:
+            </p>
+            <ul class="remote-roles-list">
+                <li><strong>Remote Executive Assistant:</strong> Partnering directly with corporate leaders to optimize business workflows, triage confidential communications, format professional documentation, and orchestrate calendar scheduling.</li>
+                <li><strong>Social Work Coordinator:</strong> Conducting structured family case intakes, processing data records, and coordinating field resource allocation systems through secure virtual platforms.</li>
+                <li><strong>Online Educator & Sales Specialist:</strong> Creating interactive learning curriculum modules, leading online remote tutoring groups, and driving lead management pipelines within digital CRMs.</li>
+            </ul>
+            <p>
+                I am thoroughly adept at using modern corporate workspace tools, maintaining strict compliance with project deadlines, and delivering high-value operational results to global remote teams.
+            </p>
             
-            <div class="skills-category">
-                <h3>🎓 Online Teaching</h3>
-                <div class="badge-container">
-                    <span class="badge teacher">Curriculum Development</span>
-                    <span class="badge teacher">Virtual Classroom Setup</span>
-                    <span class="badge teacher">Interactive E-Lessons</span>
-                    <span class="badge teacher">Student Assessments</span>
-                    <span class="badge teacher">Remote Study Curation</span>
-                    <span class="badge teacher">Progress Analytics</span>
-                    <span class="badge teacher">Educational Mentoring</span>
+            <div class="highlight-bar">
+                <div class="stat-item">
+                    <strong>100%</strong>
+                    <span>Remote Ready</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Executive</strong>
+                    <span>Support Structure</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Cross-Zone</strong>
+                    <span>Scheduling Expert</span>
                 </div>
             </div>
         </section>
 
-        <!-- Detailed Experiences & Services Descriptions -->
-        <h2>Professional Services & Practical Experience</h2>
-        <p class="section-subtitle">What I deliver to scale your community programs, business operations, and learning initiatives</p>
+        <!-- Detailed Services Grid -->
+        <h2>Core Services & Experience</h2>
+        <p class="section-subtitle">High-value specialized deliverables ready for remote execution</p>
         
         <section class="services">
             <div class="card">
-                <img src="https://unsplash.com" alt="Social Work Field Meeting" class="card-img">
