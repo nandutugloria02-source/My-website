@@ -1,0 +1,4 @@
+Demo Case ID,Date Received,Enquiry Type,Priority,Last Action,Next Step,Follow-up Date,Assigned To,Status,Resolution Notes
+CASE-DEMO-001,2026-11-02,Appointment request,High,Details recorded,Confirm available time,2026-11-03,Customer Support,Open,Fictional sample only
+CASE-DEMO-002,2026-11-02,Service information,Normal,Information sent,Check if further help is needed,2026-11-04,Customer Support,Follow-up,Fictional sample only
+CASE-DEMO-003,2026-11-02,Account query,High,Escalated to relevant team,Track response and update customer,2026-11-03,Customer Support,Escalated,Fictional sample only
