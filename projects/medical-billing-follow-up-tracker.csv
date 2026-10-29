@@ -1,0 +1,5 @@
+Demo Record ID,Date Received,Document Checklist,Verification Status,Billing Review Status,Missing Information,Next Action,Follow-up Date,Assigned To,Notes
+BILL-DEMO-001,2026-11-02,Complete,Checked,Ready for review,None,Route to authorised reviewer,2026-11-03,Medical VA,Fictional sample only
+BILL-DEMO-002,2026-11-02,Incomplete,Pending,On hold,One document,Request missing document through approved process,2026-11-03,Medical VA,Fictional sample only
+BILL-DEMO-003,2026-11-02,Complete,Needs review,Needs review,Possible discrepancy,Flag for authorised billing staff,2026-11-04,Medical VA,Fictional sample only
+BILL-DEMO-004,2026-11-02,Complete,Checked,Ready for review,None,Record completion and next owner,2026-11-04,Medical VA,Fictional sample only
