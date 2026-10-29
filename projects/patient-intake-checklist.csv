@@ -1,0 +1,5 @@
+Demo Patient ID,Intake Step,Required Check,Status,Next Administrative Action,Completed Date,Assigned To,Notes
+DEMO-001,Appointment details,Date time and visit type match schedule,Complete,Confirm in approved system,2026-11-02,Medical VA,Fictional sample only
+DEMO-001,Intake forms,Required forms received and filed,Pending,Send approved reminder,,Medical VA,Fictional sample only
+DEMO-001,Information verification,Required fields checked against authorised source,In progress,Flag discrepancies to authorised staff,,Medical VA,Fictional sample only
+DEMO-001,Record readiness,Required documentation checks complete,Pending,Update readiness after checks,,Medical VA,Fictional sample only
