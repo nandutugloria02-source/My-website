@@ -1,288 +1,1038 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gloria Nandutu — Executive Assistant · Online Teacher · Social Worker</title>
-<meta name="description" content="Gloria Nandutu is an executive assistant, online English teacher, and social worker helping businesses, schools, and organizations run smoothly.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink: #0E2A47;
-  --ink-soft: #17395C;
-  --paper: #FAF8F2;
-  --paper-dim: #F0ECE0;
-  --slate: #57616E;
-  --gold: #C08829;
-  --gold-soft: #F4E3BE;
-  --coral: #D9622E;
-  --coral-soft: #FAE0D2;
-  --teal: #1E7A6E;
-  --teal-soft: #DCEEEA;
-  --sage: #4C7A52;
-  --sage-soft: #DDEBDD;
-  --line: rgba(14,42,71,0.12);
-  --display: 'Fraunces', Georgia, serif;
-  --body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --radius: 14px;
-  --wrap: 1160px;
-}
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
-body{ margin:0; background: var(--paper); color: var(--ink); font-family: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-img{ max-width:100%; display:block; }
-a{ color: inherit; text-decoration: none; }
-ul{ margin:0; padding:0; list-style:none; }
-.wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 32px; }
-.grain{ position: fixed; inset:0; pointer-events:none; z-index:1; opacity:.035; mix-blend-mode:multiply; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-h1,h2,h3{ font-family: var(--display); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; margin: 0 0 .5em; }
-h1{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); line-height:1.08; font-weight:500; }
-h1 .hl{ color: var(--gold); font-style: italic; font-weight: 500; }
-.section-title{ font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight:500; max-width: 620px; }
-.section-title.center{ margin-left:auto; margin-right:auto; text-align:center; }
-.eyebrow{ font-family: var(--body); font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 1em; }
-.eyebrow.center{ text-align:center; }
-.site-header{ position: sticky; top:0; z-index:20; background: rgba(250,248,242,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.header-inner{ display:flex; align-items:center; justify-content:space-between; padding-top: 18px; padding-bottom: 18px; }
-.logo{ font-family: var(--display); font-weight:600; font-size:1.1rem; color: var(--ink); }
-.site-nav{ display:flex; align-items:center; gap: 30px; font-size:.92rem; font-weight:500; }
-.site-nav a{ color: var(--slate); transition: color .2s; }
-.site-nav a:hover{ color: var(--ink); }
-.nav-cta{ background: var(--ink); color: var(--paper) !important; padding: 9px 18px; border-radius: 100px; }
-.nav-cta:hover{ background: var(--teal); }
-.hero{ display:grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items:center; padding: 88px 32px 96px; }
-.hero-sub{ color: var(--slate); font-size: 1.06rem; max-width: 480px; margin-bottom: 2em; }
-.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
-.btn{ display:inline-flex; align-items:center; justify-content:center; padding: 13px 26px; border-radius: 100px; font-weight: 600; font-size: .95rem; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
-.btn-primary{ background: var(--ink); color: var(--paper); }
-.btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(14,42,71,.25); background: var(--teal); }
-.btn-ghost{ border:1.5px solid var(--line); color: var(--ink); }
-.btn-ghost:hover{ border-color: var(--gold); color: var(--gold); }
-.hero-photo{ position:relative; justify-self:center; }
-.photo-frame{ width: 340px; aspect-ratio: 4/5; overflow:hidden; border-radius: 20px; box-shadow: 0 30px 60px -20px rgba(14,42,71,.4); border: 6px solid #fff; }
-.photo-frame img{ width:100%; height:100%; object-fit: cover; object-position: 50% 20%; }
-.pillars{ padding: 40px 0 100px; }
-.thread-wrap{ position: relative; margin-top: 56px; }
-.thread-line{ position:absolute; top:22px; left:0; width:100%; height:40px; pointer-events:none; }
-.thread-line path{ fill:none; stroke: var(--line); stroke-width:2; stroke-dasharray: 3 8; stroke-linecap: round; }
-.pillar-grid{ position:relative; z-index:2; display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.pillar{ background: #fff; border-radius: var(--radius); padding: 34px 28px 30px; border: 1px solid var(--line); position: relative; }
-.pillar-node{ width: 44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom: 22px; border: 2px solid currentColor; }
-.pillar-node::after{ content:''; width:10px; height:10px; border-radius:50%; background: currentColor; }
-.pillar-kicker{ display:block; font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color: var(--slate); margin-bottom: 8px; }
-.pillar h3{ font-size: 1.35rem; margin-bottom:.4em; }
-.pillar-desc{ color: var(--slate); font-size:.95rem; margin-bottom: 1.3em; }
-.pillar li{ font-size: .92rem; padding: 8px 0; border-top: 1px solid var(--line); display:flex; gap:10px; }
-.pillar li::before{ content:'—'; color: currentColor; flex-shrink:0; }
-.pillar-ea{ color: var(--teal); }
-.pillar-ea .pillar-node{ background: var(--teal-soft); }
-.pillar-teach{ color: var(--coral); }
-.pillar-teach .pillar-node{ background: var(--coral-soft); }
-.pillar-sw{ color: var(--sage); }
-.pillar-sw .pillar-node{ background: var(--sage-soft); }
-.pillar li{ color: var(--ink); }
-.services{ padding: 70px 0; background: var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.tag-cloud{ display:flex; flex-wrap:wrap; justify-content:center; gap: 12px; margin-top: 40px; }
-.tag-cloud span{ background:#fff; border:1px solid var(--line); border-radius:100px; padding: 10px 20px; font-size:.9rem; font-weight:500; color: var(--ink-soft); }
-.about{ padding: 100px 0; }
-.about-grid{ display:grid; grid-template-columns: 1.3fr .7fr; gap: 64px; }
-.about-copy p{ color: var(--slate); }
-.credentials{ margin-top: 1.6em; display:flex; flex-direction:column; gap: 10px; }
-.credentials li{ font-size:.94rem; padding-left: 22px; position:relative; color: var(--ink-soft); }
-.credentials li::before{ content:''; position:absolute; left:0; top:9px; width:7px; height:7px; border-radius:50%; background: var(--gold); }
-.tools-label{ font-weight:600; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; color: var(--slate); margin-bottom: 16px; }
-.tools-grid{ display:flex; flex-wrap:wrap; gap:10px; }
-.tools-grid span{ background: var(--paper-dim); border-radius: 8px; padding: 8px 12px; font-size: .84rem; font-weight:500; }
-.contact{ background: var(--ink); color: var(--paper); padding: 100px 0; }
-.contact .eyebrow{ color: var(--gold); }
-.contact .section-title{ color:#fff; }
-.contact-sub{ color: rgba(250,248,242,.72); max-width: 480px; margin-bottom: 2.4em; font-size:1.05rem; }
-.contact-links{ display:flex; flex-wrap:wrap; gap: 18px; }
-.contact-link{ display:flex; flex-direction:column; gap:4px; background: rgba(250,248,242,.06); border: 1px solid rgba(250,248,242,.18); border-radius: var(--radius); padding: 20px 26px; min-width: 260px; transition: background .2s, transform .2s; }
-.contact-link:hover{ background: rgba(250,248,242,.12); transform: translateY(-2px); }
-.contact-label{ font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color: var(--gold); }
-.contact-value{ font-family: var(--display); font-size: 1.1rem; }
-.site-footer{ padding: 26px 0 34px; }
-.footer-inner{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:.82rem; color: var(--slate); }
-@media (max-width: 880px){
-  .hero{ grid-template-columns: 1fr; padding-top: 56px; text-align:center; }
-  .hero-sub{ margin-left:auto; margin-right:auto; }
-  .hero-actions{ justify-content:center; }
-  .hero-photo{ order:-1; }
-  .photo-frame{ width: 240px; }
-  .pillar-grid{ grid-template-columns: 1fr; }
-  .thread-line{ display:none; }
-  .about-grid{ grid-template-columns: 1fr; }
-  .site-nav{ gap: 16px; font-size:.85rem; }
-  .site-nav a:not(.nav-cta){ display:none; }
-}
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior: auto; }
-  .btn, .contact-link{ transition:none; }
-}
-a:focus-visible, .btn:focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gloria Nandutu is a remote Executive Assistant and Medical Virtual Assistant providing executive support, patient scheduling, billing documentation, customer service and business operations support.">
+  <meta name="theme-color" content="#123d35">
+  <title>Gloria Nandutu | Executive & Medical Virtual Assistant</title>
+
+  <style>
+    :root {
+      --green: #123d35;
+      --green-light: #1d5b4d;
+      --cream: #f8f6f0;
+      --white: #ffffff;
+      --gold: #c69b58;
+      --text: #25342f;
+      --muted: #63716b;
+      --line: #e4e8e1;
+      --soft-green: #eaf1ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--green);
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.4px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-light);
+    }
+
+    .nav-contact {
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 10px 17px;
+      border-radius: 7px;
+    }
+
+    .hero {
+      background: var(--green);
+      color: var(--white);
+      padding: 82px 0 88px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.77rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.35rem);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #dfc18f;
+    }
+
+    .hero-description {
+      max-width: 630px;
+      color: #e0e9e3;
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 27px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: #172b23;
+    }
+
+    .button-outline {
+      border: 1px solid rgba(255,255,255,0.55);
+      color: var(--white);
+    }
+
+    .hero-note {
+      color: #c7d6cd;
+      font-size: 0.88rem;
+    }
+
+    .portrait-wrap {
+      position: relative;
+      max-width: 355px;
+      justify-self: center;
+      width: 100%;
+    }
+
+    .portrait-frame {
+      background: #d8e3d9;
+      padding: 10px;
+      border-radius: 18px;
+      box-shadow: 18px 18px 0 rgba(198,155,88,0.35);
+    }
+
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 10px;
+    }
+
+    .portrait-caption {
+      text-align: center;
+      color: #e0e9e3;
+      font-size: 0.85rem;
+      margin-top: 23px;
+    }
+
+    .trust-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--green);
+      font-size: 1.03rem;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 690px;
+      margin-bottom: 38px;
+    }
+
+    .section-label {
+      color: var(--green-light);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-weight: 800;
+      font-size: 0.75rem;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--green);
+      font-size: clamp(1.9rem, 4vw, 2.75rem);
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 29px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(18,61,53,0.08);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-bottom: 13px;
+    }
+
+    .service-card h3 {
+      color: var(--green);
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 16px;
+    }
+
+    .service-card ul {
+      list-style: none;
+    }
+
+    .service-card li {
+      position: relative;
+      padding-left: 20px;
+      margin: 8px 0;
+      font-size: 0.91rem;
+    }
+
+    .service-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green-light);
+      font-weight: 800;
+    }
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-panel {
+      background: var(--soft-green);
+      padding: 31px;
+      border-radius: 12px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .about-panel h3 {
+      color: var(--green);
+      margin-bottom: 13px;
+      font-size: 1.25rem;
+    }
+
+    .about-panel p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .about-copy p {
+      margin-bottom: 17px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .check-list li {
+      margin: 12px 0;
+      padding-left: 27px;
+      position: relative;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--green-light);
+      font-weight: 800;
+      position: absolute;
+      left: 0;
+    }
+
+    .experience-list {
+      border-left: 2px solid var(--line);
+      margin-left: 7px;
+      padding-left: 27px;
+    }
+
+    .experience-item {
+      position: relative;
+      padding-bottom: 31px;
+    }
+
+    .experience-item::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: var(--gold);
+      border: 3px solid var(--cream);
+      border-radius: 50%;
+      position: absolute;
+      left: -36px;
+      top: 6px;
+    }
+
+    .experience-item h3 {
+      color: var(--green);
+      font-size: 1.12rem;
+      line-height: 1.4;
+    }
+
+    .experience-meta {
+      color: var(--green-light);
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin: 5px 0 9px;
+    }
+
+    .experience-item p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .credentials {
+      background: var(--soft-green);
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .credential {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 22px;
+      border-radius: 10px;
+    }
+
+    .credential h3 {
+      color: var(--green);
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .credential p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .tool {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 10px 15px;
+      border-radius: 7px;
+      color: var(--green);
+      font-size: 0.91rem;
+      font-weight: 600;
+    }
+
+    .tools-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .contact {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .contact .section-label {
+      color: #dfc18f;
+    }
+
+    .contact h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .contact-copy {
+      color: #dce7df;
+      max-width: 540px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.17);
+      padding: 27px;
+      border-radius: 12px;
+    }
+
+    .contact-row {
+      margin-bottom: 18px;
+    }
+
+    .contact-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-row span {
+      display: block;
+      color: #d1dfd5;
+      font-size: 0.8rem;
+      margin-bottom: 3px;
+    }
+
+    .contact-row a {
+      overflow-wrap: anywhere;
+      font-weight: 600;
+    }
+
+    .contact-row a:hover {
+      color: #dfc18f;
+      text-decoration: underline;
+    }
+
+    .footer {
+      background: #0b2c26;
+      color: #d1dfd5;
+      padding: 24px 0;
+      font-size: 0.84rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      color: #ffffff;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero {
+        padding: 58px 0 65px;
+      }
+
+      .portrait-wrap {
+        max-width: 300px;
+      }
+
+      .portrait-frame img {
+        height: 340px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-inner {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      section {
+        padding: 55px 0;
+      }
+
+      .services-grid,
+      .credentials-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        gap: 15px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .service-card,
+      .about-panel,
+      .contact-card {
+        padding: 23px;
+      }
+
+      .nav-links {
+        gap: 11px 15px;
+      }
+
+      .nav-links a {
+        font-size: 0.83rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="grain"></div>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a href="#top" class="logo">Gloria Nandutu</a>
-    <nav class="site-nav">
-      <a href="#work">What I Do</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
-  </div>
-</header>
-<main id="top">
-  <section class="hero wrap">
-    <div class="hero-copy">
-      <p class="eyebrow">Executive Assistant &middot; Online Teacher &middot; Social Worker</p>
-      <h1>One professional.<br>Three ways to<br><span class="hl">lighten your load.</span></h1>
-      <p class="hero-sub">I'm Gloria — I help founders and small teams stay organized, help young learners fall in love with English, and help people find the support they need.</p>
-      <div class="hero-actions">
-        <a href="mailto:nandutu.gloria02@gmail.com" class="btn btn-primary">Email Gloria</a>
-        <a href="https://www.linkedin.com/in/nandutu-gloria" target="_blank" rel="noopener" class="btn btn-ghost">Connect on LinkedIn</a>
-      </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">GLORIA NANDUTU<span>.</span></a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Qualifications</a>
+        <a class="nav-contact" href="#contact">Contact Me</a>
+      </nav>
     </div>
-    <div class="hero-photo">
-      <div class="photo-frame">
-        <img src="gloria-nandutu-compressed.png" alt="Portrait of Gloria Nandutu"/>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Remote Executive & Medical Administrative Support</p>
+
+          <h1>More organised days.<br>More room to <span>grow.</span></h1>
+
+          <p class="hero-description">
+            I help founders, busy professionals and healthcare teams manage
+            their daily operations, coordinate schedules, support customers
+            and keep important details under control. I bring over five years
+            of professional experience and a reliable, people-centred approach
+            to remote work.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-gold" href="#contact">Let's Work Together</a>
+            <a class="button button-outline" href="#experience">Explore My Experience</a>
+          </div>
+
+          <p class="hero-note">
+            Available for remote opportunities with teams worldwide.
+          </p>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img
+              src="gloria-nandutu-compressed.png"
+              alt="Portrait of Gloria Nandutu"
+              onerror="this.onerror=null; this.src='https://nandutugloria02-source.github.io/My-website/gloria-nandutu-compressed.png';"
+            >
+          </div>
+          <p class="portrait-caption">
+            Professional support. Clear communication. Dependable follow-through.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="pillars" id="work">
-    <div class="wrap">
-      <p class="eyebrow center">What I Do</p>
-      <h2 class="section-title center">Three roles. One way of working &mdash;<br>carefully, and on time.</h2>
-    </div>
-    <div class="thread-wrap wrap">
-      <svg class="thread-line" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,20 C300,20 300,20 600,20 C900,20 900,20 1200,20" />
-      </svg>
-      <div class="pillar-grid">
-        <article class="pillar pillar-ea">
-          <div class="pillar-node"></div>
-          <span class="pillar-kicker">01 &mdash; Administrative</span>
-          <h3>Executive Assistant</h3>
-          <p class="pillar-desc">I run the operational backbone so founders and teams can focus on the work only they can do.</p>
-          <ul>
-            <li>Calendar &amp; inbox management</li>
-            <li>Meeting scheduling &amp; coordination</li>
-            <li>Travel planning &amp; logistics</li>
-            <li>Document prep &amp; CRM data entry</li>
-            <li>Email marketing &amp; campaign support</li>
-            <li>Client &amp; customer communication</li>
-          </ul>
-        </article>
-        <article class="pillar pillar-teach">
-          <div class="pillar-node"></div>
-          <span class="pillar-kicker">02 &mdash; Education</span>
-          <h3>Online Teacher</h3>
-          <p class="pillar-desc">TEFL-certified, teaching Pre-K&ndash;Grade 3 learners to read, speak, and enjoy English online.</p>
-          <ul>
-            <li>Live English lessons for young learners</li>
-            <li>Lesson planning &amp; curriculum pacing</li>
-            <li>Interactive, screen-friendly activities</li>
-            <li>Progress tracking &amp; parent updates</li>
-            <li>Patient, encouraging classroom presence</li>
-          </ul>
-        </article>
-        <article class="pillar pillar-sw">
-          <div class="pillar-node"></div>
-          <span class="pillar-kicker">03 &mdash; People &amp; Care</span>
-          <h3>Social Worker</h3>
-          <p class="pillar-desc">Trained to listen first &mdash; supporting people through assessment, advocacy, and referral.</p>
-          <ul>
-            <li>Client-centered case support</li>
-            <li>Needs assessment &amp; referrals</li>
-            <li>Advocacy &amp; community resourcing</li>
-            <li>Confidential handling of sensitive information</li>
-            <li>Calm, empathetic problem-solving</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="services" id="services">
-    <div class="wrap">
-      <p class="eyebrow center">Also Available For</p>
-      <h2 class="section-title center">Whatever "getting it done" looks like for you.</h2>
-      <div class="tag-cloud">
-        <span>Email Marketing</span>
-        <span>Administrative Support</span>
-        <span>Data Entry</span>
-        <span>CRM Management</span>
-        <span>Customer Service</span>
-        <span>Project Coordination</span>
-        <span>Virtual Assistance</span>
-        <span>Bookkeeping Support</span>
-        <span>Social Media Scheduling</span>
-        <span>Zoom &amp; Meeting Support</span>
-      </div>
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="wrap about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">About Gloria</p>
-        <h2 class="section-title">Five years of keeping things running.</h2>
-        <p>I've spent the last five-plus years moving between administration, sales, customer service, and operations &mdash; at organizations like China State Construction and Engineering Corporation and Airtel Uganda, and remotely with a technology company based in Phoenix, Arizona. Alongside that, I teach English to young learners online and carry a social work background that shapes how I show up for every client: patient, thorough, and genuinely invested in the outcome.</p>
-        <ul class="credentials">
-          <li>BA in Social Work &amp; Social Administration &mdash; Uganda Christian University</li>
-          <li>Certificate in Virtual Assistance &mdash; ALX Africa</li>
-          <li>TEFL Certified</li>
-          <li>UNESCO Certificate in AI &amp; Digital Citizenship</li>
-          <li>Fluent in English &amp; Luganda</li>
-        </ul>
-      </div>
-      <div class="about-tools">
-        <p class="tools-label">Tools I work in</p>
-        <div class="tools-grid">
-          <span>Google Workspace</span>
-          <span>Microsoft 365</span>
-          <span>Asana</span>
-          <span>ClickUp</span>
-          <span>Trello</span>
-          <span>Slack</span>
-          <span>Zoom</span>
-          <span>Zoho CRM</span>
-          <span>HubSpot</span>
-          <span>Zendesk</span>
-          <span>Loom</span>
-          <span>QuickBooks</span>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>5+ Years</strong>
+          <span>Professional experience</span>
+        </div>
+        <div class="trust-item">
+          <strong>Executive & Healthcare</strong>
+          <span>Administrative support experience</span>
+        </div>
+        <div class="trust-item">
+          <strong>Remote-Ready</strong>
+          <span>Organised, responsive and collaborative</span>
         </div>
       </div>
     </div>
-  </section>
-  <section class="contact" id="contact">
-    <div class="wrap contact-inner">
-      <p class="eyebrow">Let's Work Together</p>
-      <h2 class="section-title">Tell me what's on your plate.</h2>
-      <p class="contact-sub">Whether it's your inbox, your classroom, or a client who needs support &mdash; I'd love to hear about it.</p>
-      <div class="contact-links">
-        <a href="mailto:nandutu.gloria02@gmail.com" class="contact-link">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">nandutu.gloria02@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/nandutu-gloria" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/nandutu-gloria</span>
-        </a>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">How I Can Help</p>
+          <h2>Practical support that keeps work moving.</h2>
+          <p>
+            From managing administrative details to coordinating patient
+            appointments, I help reduce the everyday workload so teams can
+            focus on their priorities.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <p class="service-number">01 / EXECUTIVE SUPPORT</p>
+            <h3>Executive & Virtual Assistance</h3>
+            <p>
+              Reliable day-to-day support that helps founders and busy
+              professionals stay organised and make better use of their time.
+            </p>
+            <ul>
+              <li>Calendar and meeting coordination</li>
+              <li>Email management and follow-ups</li>
+              <li>Travel and appointment arrangements</li>
+              <li>Document preparation and organisation</li>
+              <li>Task tracking and project coordination</li>
+              <li>Customer and stakeholder communication</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">02 / HEALTHCARE ADMINISTRATION</p>
+            <h3>Medical Virtual Assistance</h3>
+            <p>
+              Patient-focused administrative support with attention to
+              accuracy, confidentiality and timely communication.
+            </p>
+            <ul>
+              <li>Patient scheduling and appointment follow-ups</li>
+              <li>Patient intake and information verification</li>
+              <li>Electronic medical record updates</li>
+              <li>Billing documentation and record management</li>
+              <li>Patient communication and coordination</li>
+              <li>Awareness of HIPAA privacy requirements</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">03 / BUSINESS & PEOPLE SUPPORT</p>
+            <h3>Customer Service & Administration</h3>
+            <p>
+              Friendly, organised support that helps customers receive
+              timely responses and keeps business information in order.
+            </p>
+            <ul>
+              <li>Inbound and outbound customer calls</li>
+              <li>Customer relationship management updates</li>
+              <li>Data entry and spreadsheet management</li>
+              <li>Sales follow-ups and appointment setting</li>
+              <li>Administrative documentation</li>
+              <li>Online English teaching and learner support</li>
+            </ul>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <h3>A dependable extra pair of hands</h3>
+          <p>
+            Good support is more than completing a checklist. It means
+            communicating clearly, protecting confidential information,
+            noticing details and following through without needing constant
+            reminders.
+          </p>
+          <p style="margin-top: 15px;">
+            My background across administration, customer service,
+            healthcare support, teaching and social work has taught me
+            to work with different people, priorities and responsibilities.
+          </p>
+        </div>
+
+        <div class="about-copy">
+          <div class="section-heading" style="margin-bottom: 18px;">
+            <p class="section-label">About Me</p>
+            <h2>Professional support with a human touch.</h2>
+          </div>
+
+          <p>
+            I am Gloria Nandutu, a remote administrative professional with
+            experience supporting business operations, customer communication,
+            executive tasks and healthcare administration.
+          </p>
+
+          <p>
+            I have worked with organisations in telecommunications,
+            construction and healthcare, including remote support for a
+            United States-based company. My experience has strengthened
+            my ability to manage information carefully, coordinate tasks
+            and communicate professionally across different teams.
+          </p>
+
+          <p>
+            I also hold a degree in Social Work and Social Administration.
+            My teaching and social work background adds patience, empathy
+            and a practical understanding of people's needs to the way I work.
+          </p>
+
+          <ul class="check-list">
+            <li>Clear written and verbal communication</li>
+            <li>Strong organisation and attention to detail</li>
+            <li>Respect for confidentiality and data privacy</li>
+            <li>Comfortable working with remote teams and digital tools</li>
+            <li>Committed to learning, accountability and continuous improvement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Professional Background</p>
+          <h2>Experience built across people, processes and operations.</h2>
+          <p>
+            My experience spans healthcare administration, executive support,
+            customer service and documentation.
+          </p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <h3>Medical Virtual Assistant — Billing & Patient Scheduling</h3>
+            <p class="experience-meta">
+              CURE International Children's Hospital | April 2026 – Present
+            </p>
+            <p>
+              Support patient appointment scheduling, follow-ups, patient
+              intake, electronic medical records and billing documentation.
+              Help maintain accurate records and handle patient information
+              with appropriate confidentiality. Current work includes
+              scheduling approximately five patients per three hours and
+              processing around 40 billing records weekly with no errors,
+              based on my reported work results.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>Remote Executive Assistant & Operations Support</h3>
+            <p class="experience-meta">
+              Phoenix-based Technology Company, United States | March 2025 – February 2026
+            </p>
+            <p>
+              Supported daily administrative and operational activities,
+              customer communication, appointment setting, follow-ups,
+              record management and coordination across a remote working
+              environment. Helped keep tasks, communications and business
+              information organised.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>Virtual Assistant — Executive & Customer Support</h3>
+            <p class="experience-meta">
+              Airtel Uganda | April 2024 – December 2024
+            </p>
+            <p>
+              Assisted with customer enquiries, communication, administrative
+              tasks and record updates. Handled customer calls and supported
+              timely responses while maintaining a professional service experience.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>Administrative & Documentation Assistant</h3>
+            <p class="experience-meta">
+              China State Construction & Engineering Corporation | May 2022 – February 2024
+            </p>
+            <p>
+              Supported documentation, report preparation, information
+              organisation and administrative record keeping. Helped maintain
+              organised files and accurate information for day-to-day operations.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>Survey Assistant</h3>
+            <p class="experience-meta">
+              Uganda National Roads Authority | February 2019 – April 2022
+            </p>
+            <p>
+              Gained experience supporting field-related activities,
+              information collection and documentation while working
+              with teams and following assigned procedures.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="credentials" id="credentials">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Education & Training</p>
+          <h2>Knowledge that supports the work.</h2>
+          <p>
+            A combination of formal education and practical training
+            relevant to administration, healthcare support and communication.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+          <article class="credential">
+            <h3>Degree in Social Work and Social Administration</h3>
+            <p>Uganda Christian University</p>
+          </article>
+
+          <article class="credential">
+            <h3>Certificate in Virtual Assistance</h3>
+            <p>ALX Africa</p>
+          </article>
+
+          <article class="credential">
+            <h3>HIPAA Training Certificate</h3>
+            <p>Healthcare privacy and protection of patient information</p>
+          </article>
+
+          <article class="credential">
+            <h3>TEFL Certificate</h3>
+            <p>Teaching English as a Foreign Language</p>
+          </article>
+
+          <article class="credential">
+            <h3>Diploma in Child Care</h3>
+            <p>Child care knowledge and learner support</p>
+          </article>
+
+          <article class="credential">
+            <h3>Certificate in Elderly Caregiving</h3>
+            <p>Caregiving knowledge and person-centred support</p>
+          </article>
+
+          <article class="credential">
+            <h3>UNESCO AI and Digital Citizenship</h3>
+            <p>Training in artificial intelligence and digital citizenship</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Digital Toolkit</p>
+          <h2>Tools for organised remote work.</h2>
+          <p>
+            Familiarity with digital platforms used to communicate,
+            coordinate tasks, manage information and support customers.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <span class="tool">Microsoft 365</span>
+          <span class="tool">Microsoft Excel</span>
+          <span class="tool">Google Workspace</span>
+          <span class="tool">Google Sheets</span>
+          <span class="tool">Zoho CRM</span>
+          <span class="tool">HubSpot</span>
+          <span class="tool">Salesforce</span>
+          <span class="tool">Asana</span>
+          <span class="tool">ClickUp</span>
+          <span class="tool">Trello</span>
+          <span class="tool">Slack</span>
+          <span class="tool">Zoom</span>
+          <span class="tool">Airtable</span>
+          <span class="tool">Notion</span>
+          <span class="tool">Canva</span>
+          <span class="tool">Jane App</span>
+          <span class="tool">QuickBooks</span>
+          <span class="tool">Electronic Medical Records</span>
+        </div>
+
+        <p class="tools-note">
+          My experience varies by platform, and I am willing to learn
+          the systems and workflows used by each team.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Let's Connect</p>
+          <h2>Need reliable support for your team?</h2>
+          <p class="contact-copy">
+            If you need help managing administrative tasks, supporting
+            patients, coordinating appointments or keeping daily operations
+            organised, I would be glad to discuss how I can contribute.
+          </p>
+
+          <div style="margin-top: 27px;">
+            <a class="button button-gold"
+               href="mailto:nandutu.gloria02@gmail.com?subject=Remote%20Work%20Opportunity">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span>Email</span>
+            <a href="mailto:nandutu.gloria02@gmail.com">
+              nandutu.gloria02@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-row">
+            <span>Phone / WhatsApp</span>
+            <a href="https://wa.me/256783601021">
+              +256 783 601 021
+            </a>
+          </div>
+
+          <div class="contact-row">
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/nandutu-gloria"
+               target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/nandutu-gloria
+            </a>
+          </div>
+
+          <div class="contact-row">
+            <span>Work Preference</span>
+            <p>Remote opportunities worldwide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Gloria Nandutu. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
     </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Gloria Nandutu</span>
-    <span>Available Remotely</span>
-  </div>
-</footer>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear()
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
