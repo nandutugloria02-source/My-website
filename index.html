@@ -604,6 +604,38 @@
         font-size: 0.83rem;
       }
     }
+  
+    .sheet-preview {
+      margin: 16px 0 20px;
+      padding: 12px;
+      background: #f1f4f1;
+      border: 1px solid #dce4dc;
+      border-radius: 9px;
+      overflow: hidden;
+    }
+    .sheet-preview-top {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 0 10px;
+      color: var(--green);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .45px;
+      text-transform: uppercase;
+    }
+    .sheet-dot { width: 8px; height: 8px; border-radius: 50%; background: #2d7d55; display: inline-block; }
+    .sheet-preview-inner { overflow-x: auto; background: #fff; border: 1px solid #d8e0d8; border-radius: 5px; }
+    .sheet-preview table { width: 100%; min-width: 410px; border-collapse: collapse; font-size: .65rem; line-height: 1.4; }
+    .sheet-preview th { background: #dcebe0; color: #174c38; text-align: left; font-weight: 800; }
+    .sheet-preview th, .sheet-preview td { padding: 7px 8px; border: 1px solid #e0e7e0; white-space: nowrap; }
+    .sheet-preview td { color: #35443b; }
+    .sheet-preview .cell-ok { color: #206442; font-weight: 800; }
+    .sheet-preview .cell-pending { color: #9a650d; font-weight: 800; }
+    .sheet-preview .cell-review { color: #3d5e9b; font-weight: 800; }
+    .sheet-caption { font-size: .74rem; color: var(--muted); margin-top: 8px; }
+    .service-card .button { display: inline-block; margin-top: 6px; }
+
   </style>
 </head>
 
@@ -931,16 +963,16 @@
     </section>
 
     
+    
     <section id="projects">
       <div class="container">
         <div class="section-heading">
           <p class="section-label">Portfolio Projects</p>
-          <h2>Download my spreadsheet projects</h2>
+          <h2>Spreadsheet projects you can preview and download</h2>
           <p>
-            These are working spreadsheet files you can open in Microsoft Excel
-            or Google Sheets. Each project includes fictional demonstration
-            records to show how I organise administrative information and track
-            next steps. No real patient or customer data is included.
+            Each project below includes a visual preview of the spreadsheet layout
+            and a link to open the file in Excel or Google Sheets. All sample
+            records are fictional and contain no real patient or customer data.
           </p>
         </div>
 
@@ -948,42 +980,101 @@
           <article class="service-card">
             <p class="service-number">PROJECT 01 / MEDICAL SCHEDULING</p>
             <h3>Patient Appointment Schedule</h3>
-            <p>Track appointment dates, times, fictional patient IDs, visit types, form status, reminders and next actions.</p>
+            <p>Organise appointment times, visit types, form status, reminders and next actions.</p>
+            <div class="sheet-preview" role="img" aria-label="Visual preview of patient appointment spreadsheet">
+              <div class="sheet-preview-top"><span class="sheet-dot"></span> Appointment schedule · Excel preview</div>
+              <div class="sheet-preview-inner"><table>
+                <thead><tr><th>Time</th><th>Demo ID</th><th>Visit</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>09:00</td><td>DEMO-001</td><td>Follow-up</td><td class="cell-ok">Confirmed</td></tr>
+                  <tr><td>10:30</td><td>DEMO-002</td><td>New patient</td><td class="cell-pending">Pending</td></tr>
+                  <tr><td>13:00</td><td>DEMO-003</td><td>Review</td><td class="cell-ok">Confirmed</td></tr>
+                </tbody>
+              </table></div>
+              <p class="sheet-caption">Preview only · Fictional patient IDs</p>
+            </div>
             <a class="button button-gold" href="projects/patient-appointment-schedule.csv" download>Download spreadsheet</a>
           </article>
 
           <article class="service-card">
             <p class="service-number">PROJECT 02 / MEDICAL BILLING</p>
             <h3>Billing Follow-up Tracker</h3>
-            <p>Monitor document checklists, verification status, missing information, billing review status and follow-up dates.</p>
+            <p>Monitor document completeness, verification, missing items and follow-up actions.</p>
+            <div class="sheet-preview" role="img" aria-label="Visual preview of medical billing follow-up spreadsheet">
+              <div class="sheet-preview-top"><span class="sheet-dot"></span> Billing tracker · Excel preview</div>
+              <div class="sheet-preview-inner"><table>
+                <thead><tr><th>Record ID</th><th>Documents</th><th>Review</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>BILL-DEMO-01</td><td>Complete</td><td>Checked</td><td class="cell-ok">Ready</td></tr>
+                  <tr><td>BILL-DEMO-02</td><td>Missing item</td><td>Pending</td><td class="cell-pending">On hold</td></tr>
+                  <tr><td>BILL-DEMO-03</td><td>Complete</td><td>Re-check</td><td class="cell-review">Review</td></tr>
+                </tbody>
+              </table></div>
+              <p class="sheet-caption">Preview only · No real billing information</p>
+            </div>
             <a class="button button-gold" href="projects/medical-billing-follow-up-tracker.csv" download>Download spreadsheet</a>
           </article>
 
           <article class="service-card">
             <p class="service-number">PROJECT 03 / PATIENT INTAKE</p>
             <h3>Patient Intake Checklist</h3>
-            <p>Organise intake steps, required checks, completion status and the next administrative action.</p>
+            <p>Track intake steps, required checks, completion and next administrative actions.</p>
+            <div class="sheet-preview" role="img" aria-label="Visual preview of patient intake checklist spreadsheet">
+              <div class="sheet-preview-top"><span class="sheet-dot"></span> Intake checklist · Excel preview</div>
+              <div class="sheet-preview-inner"><table>
+                <thead><tr><th>Intake step</th><th>Check</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Appointment details</td><td>Verified</td><td class="cell-ok">Complete</td></tr>
+                  <tr><td>Required forms</td><td>Received</td><td class="cell-pending">Pending</td></tr>
+                  <tr><td>Record readiness</td><td>Final check</td><td class="cell-review">In progress</td></tr>
+                </tbody>
+              </table></div>
+              <p class="sheet-caption">Preview only · Fictional sample workflow</p>
+            </div>
             <a class="button button-gold" href="projects/patient-intake-checklist.csv" download>Download spreadsheet</a>
           </article>
 
           <article class="service-card">
             <p class="service-number">PROJECT 04 / EXECUTIVE SUPPORT</p>
             <h3>Weekly Executive Planner</h3>
-            <p>Plan weekly priorities, meetings, preparation, deadlines, follow-up actions, owners and task status.</p>
+            <p>Plan priorities, meetings, deadlines, owners and follow-up tasks across the week.</p>
+            <div class="sheet-preview" role="img" aria-label="Visual preview of weekly executive planner spreadsheet">
+              <div class="sheet-preview-top"><span class="sheet-dot"></span> Weekly planner · Excel preview</div>
+              <div class="sheet-preview-inner"><table>
+                <thead><tr><th>Day</th><th>Priority</th><th>Action</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Monday</td><td>Team meeting</td><td>Send action list</td><td class="cell-ok">Planned</td></tr>
+                  <tr><td>Wednesday</td><td>Deadline review</td><td>Follow up owners</td><td class="cell-pending">In progress</td></tr>
+                  <tr><td>Friday</td><td>Weekly close</td><td>Plan next week</td><td class="cell-ok">Planned</td></tr>
+                </tbody>
+              </table></div>
+              <p class="sheet-caption">Preview only · Example tasks</p>
+            </div>
             <a class="button button-gold" href="projects/weekly-executive-planner.csv" download>Download spreadsheet</a>
           </article>
 
           <article class="service-card">
             <p class="service-number">PROJECT 05 / CUSTOMER OPERATIONS</p>
             <h3>Customer Enquiry Follow-up Tracker</h3>
-            <p>Track enquiries, priority, last action, next step, follow-up date, owner and resolution status.</p>
+            <p>Track customer enquiries, priority, next steps, follow-up dates and resolution status.</p>
+            <div class="sheet-preview" role="img" aria-label="Visual preview of customer enquiry follow-up spreadsheet">
+              <div class="sheet-preview-top"><span class="sheet-dot"></span> Customer tracker · Excel preview</div>
+              <div class="sheet-preview-inner"><table>
+                <thead><tr><th>Case ID</th><th>Enquiry</th><th>Next step</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>CASE-001</td><td>Appointment</td><td>Confirm time</td><td class="cell-pending">Open</td></tr>
+                  <tr><td>CASE-002</td><td>Information</td><td>Check response</td><td class="cell-ok">Follow-up</td></tr>
+                  <tr><td>CASE-003</td><td>Account query</td><td>Track response</td><td class="cell-review">Escalated</td></tr>
+                </tbody>
+              </table></div>
+              <p class="sheet-caption">Preview only · Fictional customer cases</p>
+            </div>
             <a class="button button-gold" href="projects/customer-enquiry-follow-up-tracker.csv" download>Download spreadsheet</a>
           </article>
         </div>
         <p class="project-footnote" style="margin-top:22px;">
-          File format: CSV, which opens in Excel and Google Sheets. These are
-          portfolio demonstration templates, not records from an actual clinic
-          or employer.
+          These are live HTML previews of the spreadsheet layouts, not separate screenshot images.
+          Use the download links to open the full data in Excel or Google Sheets.
         </p>
       </div>
     </section>
