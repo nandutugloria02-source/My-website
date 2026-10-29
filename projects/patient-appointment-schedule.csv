@@ -1,0 +1,5 @@
+Appointment Date,Time,Demo Patient ID,Visit Type,Forms Status,Appointment Status,Reminder Sent,Next Action,Assigned To,Notes
+2026-11-02,09:00,DEMO-001,Follow-up,Complete,Confirmed,Yes,Prepare schedule,Medical VA,Fictional sample record
+2026-11-02,10:30,DEMO-002,New patient,Pending,Pending,No,Confirm forms received,Medical VA,Fictional sample record
+2026-11-02,13:00,DEMO-003,Review visit,Complete,Confirmed,Yes,Update status after visit,Medical VA,Fictional sample record
+2026-11-02,15:15,DEMO-004,Follow-up,In progress,Needs review,No,Contact to confirm time,Medical VA,Fictional sample record
